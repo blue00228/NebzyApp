@@ -1,0 +1,23 @@
+//
+//  Nebzy-Prefix.pch
+//  NebzyApp
+//
+//  Created by Admin on 7/16/15.
+//  Copyright (c) 2015 Admin. All rights reserved.
+//
+#import <Parse/Parse.h>
+#import <ParseFacebookUtilsV4/PFFacebookUtils.h>
+#import "Define.h"
+#import "Global.h"
+#import "AppConstant.h"
+#import "JSQMessage.h"
+
+#ifndef NebzyApp_Nebzy_Prefix_pch
+#define NebzyApp_Nebzy_Prefix_pch
+
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif

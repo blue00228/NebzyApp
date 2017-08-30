@@ -1,0 +1,38 @@
+dependencies: \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/ParseFacebookUtilsV4/ParseFacebookUtils/PFFacebookUtils.m \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/Target\ Support\ Files/ParseFacebookUtilsV4/ParseFacebookUtilsV4-prefix.pch \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/ParseFacebookUtilsV4/ParseFacebookUtils/PFFacebookUtils.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/Bolts/Bolts/Common/BFTask.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/Bolts/Bolts/Common/BFCancellationToken.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/Bolts/Bolts/Common/BFCancellationTokenRegistration.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/Parse/Parse/PFConstants.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/Parse/Parse/PFUser.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/Parse/Parse/PFObject.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/Parse/Parse/PFSubclassing.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKAccessToken.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKCopying.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKGraphRequestConnection.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKMacros.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginManager.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/Bolts/Bolts/Common/BFExecutor.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKAppEvents.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKApplicationDelegate.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKButton.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKConstants.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKGraphRequest.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKGraphRequestDataAttachment.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKSettings.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKTestUsersManager.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKUtility.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKAppLinkResolver.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/Bolts/Bolts/iOS/BFAppLinkResolving.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKAppLinkUtility.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKGraphErrorRecoveryProcessor.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKMutableCopying.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKProfile.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/FBSDKProfilePictureView.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/ParseFacebookUtilsV4/ParseFacebookUtils/Internal/PFFacebookPrivateUtilities.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/ParseFacebookUtilsV4/ParseFacebookUtils/Internal/AuthenticationProvider/iOS/PFFacebookMobileAuthenticationProvider.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/ParseFacebookUtilsV4/ParseFacebookUtils/Internal/AuthenticationProvider/PFFacebookAuthenticationProvider.h \
+  /Users/bradleyserbus/Downloads/NebzyApp/Pods/Parse/Parse/PFUserAuthenticationDelegate.h

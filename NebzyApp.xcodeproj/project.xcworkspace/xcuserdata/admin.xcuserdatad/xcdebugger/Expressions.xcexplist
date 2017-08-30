@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[LoginViewController loginUserWithTwitterEngine]:LoginViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__45-[ImageWallViewController getWallPostsSince:]_block_invoke_2:ImageWallViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[DataStore instance]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[WallViewCell updateLikeCount:]:WallViewCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.postIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ImageWallViewController getWallPostsSince:]:ImageWallViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate runSplashScreen]:AppDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[UserListViewController collectionView:didSelectItemAtIndexPath:]:UserListViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[UserListViewController handleLongPress:]:UserListViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "gestureRecognizer.state">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[CommentViewController getWallComments]:CommentViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_wallPost.comments">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ProfileViewController onMessageView:]:ProfileViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "user1.objectId">
+            </PersistentString>
+            <PersistentString
+               value = "user2.objectId">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__32-[WallViewCell updateLikeCount:]_block_invoke:WallViewCell.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[UserProfileCollectionViewCell setPictureWithFBId:]:UserProfileCollectionViewCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_itemImageView.layer.cornerRadius">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate application:didReceiveRemoteNotification:]:AppDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[FriendsListViewController getNearbyFriends]:FriendsListViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[PFUser currentUser]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__46-[UserListViewController getMyCurrentLocation]_block_invoke:UserListViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[UploadImageViewController postPost:]:UploadImageViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "curUser.username">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__39-[LoginViewController onFacebookLogin:]_block_invoke:LoginViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "user.objectId">
+            </PersistentString>
+            <PersistentString
+               value = "user">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
