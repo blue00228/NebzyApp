@@ -51,6 +51,13 @@
     _profileImage.clipsToBounds = YES;
     _profileImage.backgroundColor = [UIColor whiteColor];
     
+    // touch action
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapOnProfileImageAction)];
+    tapGesture.numberOfTapsRequired = 1;
+    [_profileImage addGestureRecognizer:tapGesture];
+    
+    
     //Set Blur Background Image
     CGSize bgSize = super.bgImage.frame.size;
     CGFloat xRatio = bgSize.width / oldWidth;
@@ -80,6 +87,26 @@
     
 //    super.bgImage.layer.borderWidth = 2;
 //    super.bgImage.layer.borderColor = [UIColor whiteColor].CGColor;
+}
+
+- (void)handleTapOnProfileImageAction {
+    
+    self.heartImage.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.001, 0.001);
+    
+    //            [self.view addSubview:popUp];
+    [self.heartImage setHidden:NO];
+    [UIView animateWithDuration:0.3/1.5 animations:^{
+        self.heartImage.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.1, 1.1);
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.3/2 animations:^{
+            self.heartImage.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.9, 0.9);
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:0.3/2 animations:^{
+                self.heartImage.transform = CGAffineTransformIdentity;
+            }];
+        }];
+    }];
+
 }
 
 -(IBAction)onMessageView:(id)sender

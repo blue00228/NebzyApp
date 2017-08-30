@@ -10,7 +10,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import "ProgressHUD.h"
 
-
+#import <AVFoundation/AVFoundation.h>
 #import "PFTwitterUtils+NativeTwitter.h"
 #import "PF_Twitter.h"
 #import "NTRTwitterClient.h"
@@ -19,11 +19,51 @@
 #import "CustomSegue.h"
 #import "CustomUnwindSegue.h"
 
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 @interface LoginViewController ()
+
+@property (nonatomic , strong) AVPlayer *avPlayer;
 
 @end
 
 @implementation LoginViewController
+
+- (void)initializeAudioSession {
+    
+    //Not affecting background music playing
+    NSError *sessionError = nil;
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:&sessionError];
+    [[AVAudioSession sharedInstance] setActive:YES error:&sessionError];
+    
+    //Set up player
+    NSURL *movieURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"intro" ofType:@"mov"]];
+    AVAsset *avAsset = [AVAsset assetWithURL:movieURL];
+    AVPlayerItem *avPlayerItem =[[AVPlayerItem alloc]initWithAsset:avAsset];
+    self.avPlayer = [[AVPlayer alloc]initWithPlayerItem:avPlayerItem];
+    AVPlayerLayer *avPlayerLayer =[AVPlayerLayer playerLayerWithPlayer:self.avPlayer];
+    [avPlayerLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
+    [avPlayerLayer setFrame:[[UIScreen mainScreen] bounds]];
+    [self.movieView.layer addSublayer:avPlayerLayer];
+    
+    //Config player
+    [self.avPlayer seekToTime:kCMTimeZero];
+    [self.avPlayer setVolume:0.0f];
+    [self.avPlayer setActionAtItemEnd:AVPlayerActionAtItemEndNone];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(playerItemDidReachEnd:)
+                                                 name:AVPlayerItemDidPlayToEndTimeNotification
+                                               object:[self.avPlayer currentItem]];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(playerStartPlaying)
+                                                 name:UIApplicationDidBecomeActiveNotification object:nil];
+    
+    //Config dark gradient view
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = [[UIScreen mainScreen] bounds];
+    gradient.colors = [NSArray arrayWithObjects:(id)[UIColorFromRGB(0x030303) CGColor], (id)[[UIColor clearColor] CGColor], (id)[UIColorFromRGB(0x030303) CGColor],nil];
+    [self.gradientView.layer insertSublayer:gradient atIndex:0];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,6 +73,13 @@
     //[[UIApplication sharedApplication] setStatusBarHidden:YES];
     [self.navigationController setNavigationBarHidden:YES];
     // Do any additional setup after loading the view, typically from a nib.
+    [self initializeAudioSession];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
+    [self.avPlayer play];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -43,6 +90,28 @@
         [self performSegueWithIdentifier:@"Segue_Login" sender:nil];
         //[Global logOut];
     }
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    
+    [self.avPlayer pause];
+}
+
+- (void)playerItemDidReachEnd:(NSNotification *)notification {
+    AVPlayerItem *p = [notification object];
+    [p seekToTime:kCMTimeZero];
+}
+
+- (void)playerStartPlaying
+{
+    [self.avPlayer play];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
 }
 
 - (IBAction)onFacebookLogin:(id)sender {

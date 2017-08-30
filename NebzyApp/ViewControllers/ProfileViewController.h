@@ -11,5 +11,6 @@
 @interface ProfileViewController : MyViewController
 
 @property (nonatomic, weak) IBOutlet UIImageView *profileImage;
+@property (strong, nonatomic) IBOutlet UIImageView *heartImage;
 
 @end

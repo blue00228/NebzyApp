@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1ECFF3591F5736C00054FAB0 /* intro.mov in Resources */ = {isa = PBXBuildFile; fileRef = 1ECFF3581F5736C00054FAB0 /* intro.mov */; };
 		349266AF49C2FA5B62F76F71 /* libPods-NebzyApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A92332695449541607DA6B /* libPods-NebzyApp.a */; };
 		8409850A1B92271E00699A41 /* login_bg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 840985091B92271E00699A41 /* login_bg1.png */; };
 		84371FB21B71B8FB00555E15 /* fb icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 84371FB01B71B8FB00555E15 /* fb icon.png */; };
@@ -182,6 +183,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1ECFF3581F5736C00054FAB0 /* intro.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = intro.mov; sourceTree = "<group>"; };
 		7B6FBD0EBC632404AB6064DB /* Pods-NebzyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NebzyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NebzyApp/Pods-NebzyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		840985091B92271E00699A41 /* login_bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_bg1.png; sourceTree = "<group>"; };
 		84371FB01B71B8FB00555E15 /* fb icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fb icon.png"; sourceTree = "<group>"; };
@@ -1153,6 +1155,7 @@
 		84DB94BC1B5749C500CD9AB2 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				1ECFF3581F5736C00054FAB0 /* intro.mov */,
 				840985091B92271E00699A41 /* login_bg1.png */,
 				84BDC9431B8D5FA7004D9308 /* logo.png */,
 				84BDC9421B8D5C25004D9308 /* Chat */,
@@ -1306,6 +1309,7 @@
 				TargetAttributes = {
 					84DB947D1B57445600CD9AB2 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 54CUE8R3TY;
 						ProvisioningStyle = Manual;
 					};
 					84DB94991B57445600CD9AB2 = {
@@ -1355,6 +1359,7 @@
 				846959A61B96D82B00A4E79D /* recent_blank@2x.png in Resources */,
 				84BDC93E1B8D5BFC004D9308 /* RoundFacebookButton3.png in Resources */,
 				848556FB1B799A4B00CD2E94 /* chat_blank@2x.png in Resources */,
+				1ECFF3591F5736C00054FAB0 /* intro.mov in Resources */,
 				84A444001B6F5E9200ACDA04 /* green_heart.png in Resources */,
 				84DB94921B57445600CD9AB2 /* Images.xcassets in Resources */,
 				846464861B8825A100B66869 /* Nebzy icon 120x120.png in Resources */,
@@ -1421,7 +1426,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		EE373549BD2AA7514136A400 /* [CP] Copy Pods Resources */ = {

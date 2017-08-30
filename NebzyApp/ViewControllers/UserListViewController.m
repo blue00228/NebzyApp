@@ -89,8 +89,25 @@
             [PFPush sendPushMessageToQueryInBackground:pushQuery withMessage:@"\ue32b"];
             //[PFPush sendPushMessageToChannelInBackground:@"global" withMessage:@"Hello World!"];
             UserProfileCollectionViewCell *curCell = (UserProfileCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
-            [curCell.heartImage setHidden:NO];
+            
             [curCell.heartImage.superview bringSubviewToFront:curCell.heartImage];
+            
+            
+            curCell.heartImage.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.001, 0.001);
+            
+//            [self.view addSubview:popUp];
+            [curCell.heartImage setHidden:NO];
+            [UIView animateWithDuration:0.3/1.5 animations:^{
+                curCell.heartImage.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.1, 1.1);
+            } completion:^(BOOL finished) {
+                [UIView animateWithDuration:0.3/2 animations:^{
+                    curCell.heartImage.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.9, 0.9);
+                } completion:^(BOOL finished) {
+                    [UIView animateWithDuration:0.3/2 animations:^{
+                        curCell.heartImage.transform = CGAffineTransformIdentity;
+                    }];
+                }];
+            }];
         }
         else
         {

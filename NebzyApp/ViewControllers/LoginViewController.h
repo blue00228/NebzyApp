@@ -16,6 +16,8 @@
 }
 
 @property (strong, nonatomic) NSArray *twitterAccounts;
+@property (strong, nonatomic) IBOutlet UIView *movieView;
+@property (strong, nonatomic) IBOutlet UIView *gradientView;
 
 - (IBAction) onFacebookLogin:(id)sender;
 - (IBAction) viewTouched:(id)sender;
