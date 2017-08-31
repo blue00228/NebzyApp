@@ -341,23 +341,67 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J32-Vv-hMa">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J32-Vv-hMa">
                                             <rect key="frame" x="2" y="2" width="370" height="121"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bXI-8C-uaj">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bXI-8C-uaj">
                                                     <rect key="frame" x="155" y="0.0" width="60" height="60"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="W0S-TA-bgT"/>
+                                                        <constraint firstAttribute="width" constant="60" id="cZV-im-3MS"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" lineBreakMode="wordWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4o-Ev-U8V">
-                                                    <rect key="frame" x="3" y="68" width="364" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4o-Ev-U8V" customClass="ArrowLabel">
+                                                    <rect key="frame" x="3" y="70" width="364" height="50"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
+                                                            <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="badgeBorderColor">
+                                                            <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="badgeBorderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="bottomArrowHeight">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="badgeCornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="drawBadgeBorder" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="showArrow" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bXI-8C-uaj" firstAttribute="centerX" secondItem="J32-Vv-hMa" secondAttribute="centerX" id="Bcm-u3-o30"/>
+                                                <constraint firstItem="bXI-8C-uaj" firstAttribute="top" secondItem="J32-Vv-hMa" secondAttribute="top" id="EUJ-e3-Q85"/>
+                                                <constraint firstItem="R4o-Ev-U8V" firstAttribute="top" secondItem="bXI-8C-uaj" secondAttribute="bottom" constant="10" id="OW0-dy-arK"/>
+                                                <constraint firstItem="R4o-Ev-U8V" firstAttribute="leading" secondItem="J32-Vv-hMa" secondAttribute="leading" constant="3" id="Y85-Uq-UaA"/>
+                                                <constraint firstAttribute="bottom" secondItem="R4o-Ev-U8V" secondAttribute="bottom" constant="1" id="hHv-TX-CtR"/>
+                                                <constraint firstAttribute="trailing" secondItem="R4o-Ev-U8V" secondAttribute="trailing" constant="3" id="osH-Tw-y5w"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="badgeColor">
+                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="badgeBorderColor">
+                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="drawBadgeBorder" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="showArrow" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="J32-Vv-hMa" secondAttribute="bottom" constant="2" id="JZj-jZ-CCG"/>
+                                        <constraint firstItem="J32-Vv-hMa" firstAttribute="top" secondItem="tGY-Uz-OHQ" secondAttribute="top" constant="2" id="M0X-jQ-xmh"/>
+                                        <constraint firstItem="J32-Vv-hMa" firstAttribute="leading" secondItem="tGY-Uz-OHQ" secondAttribute="leading" constant="2" id="lSv-2X-Ki9"/>
+                                        <constraint firstAttribute="trailing" secondItem="J32-Vv-hMa" secondAttribute="trailing" constant="3" id="wWA-qP-Z56"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="lblPost" destination="R4o-Ev-U8V" id="aMf-aQ-sCn"/>
@@ -429,7 +473,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOR-x9-Pkz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="248" y="1091"/>
+            <point key="canvasLocation" x="247.5" y="1090.5"/>
         </scene>
     </scenes>
     <resources>

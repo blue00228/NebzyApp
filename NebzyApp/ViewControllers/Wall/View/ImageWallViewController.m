@@ -6,20 +6,40 @@
 #import "ImageWallViewController.h"
 #import "NSOperationQueue+SharedQueue.h"
 #import "ProgressHUD.h"
+#import "UIBezierPath+dqd_arrowhead.h"
+#import "ArrowLabel.h"
 
 @interface ImageWallTableImageCell ()
 @property (nonatomic, strong) IBOutlet UIImageView *profilePicture;
-@property (nonatomic, strong) IBOutlet UILabel *lblPost;
+@property (nonatomic, strong) IBOutlet ArrowLabel *lblPost;
 @property NSString *userObjectId;
 @end
 
 @implementation ImageWallTableImageCell
 
+-(void)drawArrow{
+    
+    UIBezierPath *path=[UIBezierPath dqd_bezierPathWithArrowFromPoint:CGPointMake((_lblPost.frame.size.width) / 2 + 10, 0)
+                                                              toPoint:CGPointMake((_lblPost.frame.size.width) / 2 + 10, -10)
+                                                            tailWidth:0.f
+                                                            headWidth:10.0f
+                                                           headLength:10.0f];
+
+    
+//    UIBezierPath *path = [UIBezierPath createBezierPathForSize:CGSizeMake(20, 20) arrowPosition:CGPointMake((_lblPost.frame.size.width) / 2 + 10, 0)];
+    
+    CAShapeLayer *shape = [CAShapeLayer layer];
+    shape.path = path.CGPath;
+    shape.fillColor = [UIColor colorWithRed:255/255.0 green:20/255.0 blue:147/255.0 alpha:1].CGColor;
+    
+    [_lblPost.layer addSublayer:shape];
+}
+
 - (void)setPictureWithImage:(UIImage *)profileImage
 {
-    _lblPost.layer.borderColor = [UIColor greenColor].CGColor;
-    _lblPost.layer.borderWidth = 1.0f;
-    _lblPost.layer.cornerRadius = 3;
+//    _lblPost.layer.borderColor = [UIColor greenColor].CGColor;
+//    _lblPost.layer.borderWidth = 1.0f;
+//    _lblPost.layer.cornerRadius = 3;
     
     UIImage *image = profileImage;
     float oldWidth = image.size.width;
@@ -239,6 +259,7 @@
                 // 5
                 // Get the Facebook User Id of the user that uploaded the image
                 PFUser *user = [[DataStore instance].fbFriends objectForKey:wallImageObject[@"postObjectId"]];
+                NSLog(@"%@", user[@"currentLocation"]);
                 WallImage *wallImage = [[WallImage alloc] init];
                 wallImage.objectId = wallImageObject.objectId;
                 wallImage.user = user;
@@ -438,14 +459,25 @@
 //    return imageCell;
 //}
 
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if(indexPath.row == 0)
+//        return 130;
+//    else
+//        return [super tableView:tableView heightForRowAtIndexPath:indexPath];
+////    return 70;
+//}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.row == 0)
-        return 130;
-    else
-        return [super tableView:tableView heightForRowAtIndexPath:indexPath];
-//    return 70;
+    return UITableViewAutomaticDimension;
 }
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 130;
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -457,7 +489,8 @@
     static NSString *ImageCellIdentifier = @"ImageCell";
     ImageWallTableImageCell *imageCell = (ImageWallTableImageCell *)[tableView dequeueReusableCellWithIdentifier:ImageCellIdentifier];
     
-    NSAttributedString *attrText = [[NSAttributedString alloc] initWithString:wallImage.text attributes:@{ NSParagraphStyleAttributeName : text_style}];
+//    NSAttributedString *attrText = [[NSAttributedString alloc] initWithString:@"\nLiverpool have completed the £35 million transfer of Alex Oxlade-Chamberlain from Arsenal on a five-year deal and hope he will not be their final acquisition ahead of the deadline.Liverpool have completed the £35 million transfer of Alex Oxlade-Chamberlain from Arsenal on a five-year deal and hope he will not be their final acquisition ahead of the deadline.Liverpool have completed the £35 million transfer of Alex Oxlade-Chamberlain from Arsenal on a five-year deal and hope he will not be their final acquisition ahead of the deadline." attributes:@{ NSParagraphStyleAttributeName : text_style}];
+    NSAttributedString *attrText = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"\n%@\n", wallImage.text] attributes:@{ NSParagraphStyleAttributeName : text_style}];
     imageCell.lblPost.attributedText = attrText;
     
     // Add the user's profile picture to the header cell

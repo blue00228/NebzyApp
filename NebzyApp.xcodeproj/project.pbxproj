@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E32B6231F579DC800A1C9DF /* UIBezierPath+dqd_arrowhead.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E32B6221F579DC800A1C9DF /* UIBezierPath+dqd_arrowhead.m */; };
+		1E32B6261F57A90500A1C9DF /* BadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E32B6251F57A90500A1C9DF /* BadgeView.m */; };
+		1E32B62C1F57CE1400A1C9DF /* ArrowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E32B62B1F57CE1400A1C9DF /* ArrowLabel.m */; };
 		1ECFF3591F5736C00054FAB0 /* intro.mov in Resources */ = {isa = PBXBuildFile; fileRef = 1ECFF3581F5736C00054FAB0 /* intro.mov */; };
 		349266AF49C2FA5B62F76F71 /* libPods-NebzyApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A92332695449541607DA6B /* libPods-NebzyApp.a */; };
 		8409850A1B92271E00699A41 /* login_bg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 840985091B92271E00699A41 /* login_bg1.png */; };
@@ -183,6 +186,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E32B6211F579DC800A1C9DF /* UIBezierPath+dqd_arrowhead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+dqd_arrowhead.h"; sourceTree = "<group>"; };
+		1E32B6221F579DC800A1C9DF /* UIBezierPath+dqd_arrowhead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+dqd_arrowhead.m"; sourceTree = "<group>"; };
+		1E32B6241F57A90500A1C9DF /* BadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeView.h; sourceTree = "<group>"; };
+		1E32B6251F57A90500A1C9DF /* BadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeView.m; sourceTree = "<group>"; };
+		1E32B62A1F57CE1400A1C9DF /* ArrowLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrowLabel.h; sourceTree = "<group>"; };
+		1E32B62B1F57CE1400A1C9DF /* ArrowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrowLabel.m; sourceTree = "<group>"; };
 		1ECFF3581F5736C00054FAB0 /* intro.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = intro.mov; sourceTree = "<group>"; };
 		7B6FBD0EBC632404AB6064DB /* Pods-NebzyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NebzyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NebzyApp/Pods-NebzyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		840985091B92271E00699A41 /* login_bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_bg1.png; sourceTree = "<group>"; };
@@ -502,6 +511,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E32B6201F579DA400A1C9DF /* Arrow */ = {
+			isa = PBXGroup;
+			children = (
+				1E32B6211F579DC800A1C9DF /* UIBezierPath+dqd_arrowhead.h */,
+				1E32B6221F579DC800A1C9DF /* UIBezierPath+dqd_arrowhead.m */,
+				1E32B6241F57A90500A1C9DF /* BadgeView.h */,
+				1E32B6251F57A90500A1C9DF /* BadgeView.m */,
+				1E32B62A1F57CE1400A1C9DF /* ArrowLabel.h */,
+				1E32B62B1F57CE1400A1C9DF /* ArrowLabel.m */,
+			);
+			path = Arrow;
+			sourceTree = "<group>";
+		};
 		53ED82A28747ECC00287121B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -887,6 +909,7 @@
 		848557E41B799A9D00CD2E94 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				1E32B6201F579DA400A1C9DF /* Arrow */,
 				846959821B94464500A4E79D /* segue */,
 				848557E51B799A9D00CD2E94 /* backend */,
 				848557F01B799A9D00CD2E94 /* general */,
@@ -1471,6 +1494,7 @@
 				848557AB1B799A6600CD2E94 /* UIImageView+AFNetworking.m in Sources */,
 				844AF36E1B7CAC5A006FEF09 /* ImageWallViewController.m in Sources */,
 				848557C21B799A6600CD2E94 /* JSQMessagesTimestampFormatter.m in Sources */,
+				1E32B6261F57A90500A1C9DF /* BadgeView.m in Sources */,
 				848557A31B799A6600CD2E94 /* AFURLConnectionOperation.m in Sources */,
 				848558171B799ABE00CD2E94 /* PhotoMediaItem.m in Sources */,
 				848557A81B799A6600CD2E94 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -1479,6 +1503,7 @@
 				848558051B799A9D00CD2E94 /* fileutil.m in Sources */,
 				848557BD1B799A6600CD2E94 /* JSQMessagesViewController.m in Sources */,
 				848557BF1B799A6600CD2E94 /* JSQMessagesAvatarImageFactory.m in Sources */,
+				1E32B62C1F57CE1400A1C9DF /* ArrowLabel.m in Sources */,
 				848557B11B799A6600CD2E94 /* IDMTapDetectingImageView.m in Sources */,
 				848557AF1B799A6600CD2E94 /* IDMPhoto.m in Sources */,
 				8485579E1B799A6600CD2E94 /* AFHTTPRequestOperation.m in Sources */,
@@ -1499,6 +1524,7 @@
 				848557B01B799A6600CD2E94 /* IDMPhotoBrowser.m in Sources */,
 				844AF36F1B7CAC5A006FEF09 /* UploadImageViewController.m in Sources */,
 				84DB948A1B57445600CD9AB2 /* NebzyApp.xcdatamodeld in Sources */,
+				1E32B6231F579DC800A1C9DF /* UIBezierPath+dqd_arrowhead.m in Sources */,
 				848557DD1B799A6600CD2E94 /* JSQMessagesTypingIndicatorFooterView.m in Sources */,
 				844AF3771B7CF0E4006FEF09 /* DataStore.m in Sources */,
 				848557B51B799A6600CD2E94 /* JSQSystemSoundPlayer+JSQMessages.m in Sources */,
