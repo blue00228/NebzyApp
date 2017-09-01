@@ -213,13 +213,12 @@
 
 - (PFQuery *)queryForCollection {
     
-    //if(!self.myGeoPoint)
-        //return nil;
+    if(![[PFUser currentUser] objectForKey:@"currentLocation"])
+        return nil;
     //PFQuery *query = [super queryForCollection];
-    //PFGeoPoint *myGeoPoint = (PFGeoPoint *)[[PFUser currentUser] valueForKey:@"currentLocation"];
+    PFGeoPoint *myGeoPoint = (PFGeoPoint *)[[PFUser currentUser] objectForKey:@"currentLocation"];
     PFQuery *query = [PFUser query];
-
-    //[query whereKey:@"currentLocation" nearGeoPoint:myGeoPoint withinKilometers:kUserRadius];
+    [query whereKey:@"currentLocation" nearGeoPoint:myGeoPoint withinMiles:kUserRadius];
     [query whereKey:@"login" equalTo:@"YES"];
     query.limit = 300;
     return query;

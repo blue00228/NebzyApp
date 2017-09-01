@@ -259,7 +259,6 @@
                 // 5
                 // Get the Facebook User Id of the user that uploaded the image
                 PFUser *user = [[DataStore instance].fbFriends objectForKey:wallImageObject[@"postObjectId"]];
-                NSLog(@"%@", user[@"currentLocation"]);
                 WallImage *wallImage = [[WallImage alloc] init];
                 wallImage.objectId = wallImageObject.objectId;
                 wallImage.user = user;

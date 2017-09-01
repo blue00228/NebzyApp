@@ -10,7 +10,7 @@
 #define IDEE_Define_h
 
 #define kBaseURL                        @"http://li1014-181.members.linode.com/drive"
-#define kUserRadius                     400
+#define kUserRadius                     100
 
 #define PF_WALL_POST_CLASSNAME          @"WallPost"
 #define PF_WALL_COMMENT_CLASSNAME       @"WallPostComment"
